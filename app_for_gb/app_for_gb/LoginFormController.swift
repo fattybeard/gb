@@ -24,11 +24,8 @@ class LoginFormController: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        let login = loginTextField.text!
-        let password = passwordTextField.text!
-        
-        if login == "admin" && password == "admin"{
-            print("Успешная авторизация")
+        if loginTextField.text == "" && passwordTextField.text == ""{
+            performSegue(withIdentifier: "LoginSegue", sender: self)
         } else {
             print("Неуспешная авторизация")
         }
