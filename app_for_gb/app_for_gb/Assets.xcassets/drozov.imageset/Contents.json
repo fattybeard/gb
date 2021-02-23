@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "kisspng-success-kid-child-computer-icons-fist-pumping-5b0d23760f5537.3880394115275877020628.png",
+      "filename" : "1х.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "2х.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "drozov.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

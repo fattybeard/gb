@@ -1,45 +1,48 @@
 //
-//  GroupViewController.swift
+//  AddGroupViewController.swift
 //  app_for_gb
 //
-//  Created by Иван Макаров on 20.02.2021.
+//  Created by Ivan Makarov on 23.02.2021.
 //
 
 import UIKit
 
-class GroupViewController: UITableViewController {
+class AddGroupViewController: UITableViewController {
+    
+    let groups = [
+        Group(name: "Группа №6", photo: UIImage(named: "gr6")),
+        Group(name: "Группа №7", photo: UIImage(named: "gr7")),
+        Group(name: "Группа №8", photo: UIImage(named: "gr8")),
+        Group(name: "Группа №9", photo: UIImage(named: "gr9")),
+        Group(name: "Группа №10", photo: UIImage(named: "gr10")),
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return groups.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as? GroupCell else {
+            return UITableViewCell()
+        }
+        
+        cell.groupLabel.text = groups[indexPath.row].name
+        cell.groupAvatar.image = groups[indexPath.row].photo
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
